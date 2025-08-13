@@ -186,5 +186,7 @@ app.post("/api/send-status-update-email", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const SERVER_URL = "https://anna-university-backend-final.onrender.com";
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server running at ${SERVER_URL}`);
+});
