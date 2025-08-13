@@ -16,14 +16,12 @@ app.use((req, res, next) => {
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // Vite dev server
-      "http://localhost:3000", // Potential React dev server
-      "http://localhost:5000", // Backend server
-      "http://localhost:8080", // Add your frontend port explicitly
+      "https://anna-university-final.vercel.app",
+      "https://anna-university-backend-final.onrender.com",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true // Add this if you're using cookies/credentials
+    credentials: true,
   })
 );
 
